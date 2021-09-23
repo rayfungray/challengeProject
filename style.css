@@ -1,11 +1,12 @@
 .body{
+    pointer-events: auto;
     background: url('./assets/Coding-Challenge-Image.png') no-repeat center center fixed;
     height: 100vh;
     background-size: cover;
-    z-index:-2;
 }
 
 .left-bk{
+    pointer-events: auto;
     background-color: #611818;
     width: 25vw;
     height:100vh;
@@ -36,7 +37,7 @@
 }
 
 .text-with-box{
-    pointer-events: none;
+    pointer-events: auto;
     opacity: 0;
     color:#611818;
     width: 510px;
@@ -50,8 +51,12 @@
 
 .text-with-box.active{
     opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-3%,-2%) scale(1);
     transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+}
+
+.text.close{
+    opacity: 0;
 }
 
 .text-with-box h2{
@@ -79,6 +84,7 @@
     position: absolute;
     right:3%;
     top: 2%;
+    cursor: pointer;
 }
 
 .read-more:active{
@@ -87,6 +93,18 @@
 
 .btn{
     color:white
+}
+
+.hit-detail{
+    z-index: 2;
+}
+
+.hit-detail:hover{
+    cursor: pointer;
+}
+
+.more-detail-btn{
+    background-color: none;
 }
 
 
